@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
 
 const mongoose = require('mongoose')
 // You never want to hardcode your connection because it will change
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/mybrary', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

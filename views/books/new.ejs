@@ -1,0 +1,12 @@
+<h2>New Book</h2>
+
+<!-- action is the route that the form goes to -->
+<!-- You can only send a POST request using forms -->
+<form action="/books" method="POST" enctype="multipart/form-data">
+    <%- include('_form_fields') %> 
+    <!-- The below is an anchor tag because anchor tags are used to go to different urls while buttons are used to interact with objects like forms -->
+    <a href="/books">Cancel</a>
+    <!-- Type is submit so that the page knows that this is the button that submits the form -->
+    <button type="submit">Create</button>
+</form>
+

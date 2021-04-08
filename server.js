@@ -91,10 +91,10 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(express.static('public'))
   app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
-  // const MONGODB_URI = 'mongodb+srv://Benjamin:password1234@cluster0.yisqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+  const MONGODB_URI = 'mongodb+srv://Benjamin:password1234@cluster0.yisqe.mongodb.net/database_name?retryWrites=true&w=majority'
   
   const mongoose = require('mongoose')
-  mongoose.connect( process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  mongoose.connect( process.env.DATABASE_URL || MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true })
 
   const db = mongoose.connection
   db.on('error', error => console.error(error))

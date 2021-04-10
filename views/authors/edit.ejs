@@ -7,7 +7,9 @@
 <form action="/authors/<%= author.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %> 
     <!-- The below is an anchor tag because anchor tags are used to go to different urls while buttons are used to interact with objects like forms -->
-    <a class="btn btn-primary" href="/authors/<%= author.id %> ">Cancel</a>
-    <!-- Type is submit so that the page knows that this is the button that submits the form -->
-    <button class="btn btn-primary" type="submit">Update</button>
+    <div class="btn-row form-row-end row-end">
+        <a class="btn btn-danger" href="/authors/<%= author.id %> ">Cancel</a>
+        <!-- Type is submit so that the page knows that this is the button that submits the form -->
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
 </form>

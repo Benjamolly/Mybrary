@@ -1,0 +1,59 @@
+:root{
+    --colour-btn-border:black;
+    --colour-btn-primary-text:hsl(var(--colour-base-hue),100%,20%);
+    --colour-btn-primary-background:hsl(var(--colour-base-hue),100%,83%);
+    --colour-btn-danger-text:hsl(var(--colour-danger-base-hue),100%,20%);
+    --colour-btn-danger-background:hsl(var(--colour-danger-base-hue),100%,83%);
+
+    /* hovers */
+    --colour-btn-primary-hover-background:hsl(var(--colour-base-hue),100%,63%);
+    --colour-btn-danger-hover-background:hsl(var(--colour-danger-base-hue),100%,63%);
+    --colour-btn-primary-hover-text:hsl(var(--colour-base-hue),100%,10%);
+    --colour-btn-danger-hover-text:hsl(var(--colour-danger-base-hue),100%,10%);
+
+}
+
+.btn {
+    border: 1px solid var(--colour-btn-border);
+    border-radius: .5rem ;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-family: 'Gotham Rounded';
+    /* font family for buttons is not taken from default */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary{
+    color: var(--colour-btn-primary-text);
+    background-color:  var(--colour-btn-primary-background);
+}
+
+.btn-danger{
+    color: var(--colour-btn-danger-text);
+    background-color:  var(--colour-btn-danger-background);
+}
+
+.btn-primary:hover{
+    color: var(--colour-btn-primary-hover-text);
+    background-color:  var(--colour-btn-primary-hover-background);
+}
+
+.btn-danger:hover{
+    color: var(--colour-btn-danger-hover-text);
+    background-color:  var(--colour-btn-danger-hover-background);
+}
+
+.btn-row{
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Below selects every single child */
+.btn-row > * {
+    margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+    margin-left: 0rem;
+}

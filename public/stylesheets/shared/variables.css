@@ -1,0 +1,9 @@
+:root{
+    --colour-base-hue: 200;
+    /* hue colours go to 360. We want the danger hue to be opposite so minus/add 180 */
+    --colour-danger-hue-offset:180;
+    --colour-danger-base-hue: calc(var(--colour-base-hue) - var(--colour-danger-hue-offset));
+    --colour-background-dark: hsl(var(--colour-base-hue),100%,8%);
+    --colour-background-light: hsl(var(--colour-base-hue),100%,16%);
+    --colour-text-light: hsl(var(--colour-base-hue),100%,87%);
+}

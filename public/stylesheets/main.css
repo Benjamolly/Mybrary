@@ -1,0 +1,36 @@
+@import 'shared/fonts.css';
+@import 'shared/variables.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+
+:root{
+    font-family: 'Gotham Rounded';
+    font-size: 20px;
+    color: var(--colour-text-light);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, var(--colour-background-dark), var(--colour-background-light));
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto; 
+    /* always centered */
+    margin-bottom: 3 rem;
+    /* content never touches bottom of the screen */
+}
+
+.inner-container{
+    margin: 0 2rem;
+    /* 0 top and bottom, 2 rem left and right */
+}
+
+.page-header{
+    font-size: 2rem;
+    font-weight: 500;
+}

@@ -1,4 +1,4 @@
-<h2>
+<h2 class="page-header">
     New Author
 </h2>
 
@@ -7,7 +7,7 @@
 <form action="/authors" method="POST">
     <%- include('_form_fields') %> 
     <!-- The below is an anchor tag because anchor tags are used to go to different urls while buttons are used to interact with objects like forms -->
-    <a href="/authors">Cancel</a>
+    <a class="btn btn-primary" href="/authors">Cancel</a>
     <!-- Type is submit so that the page knows that this is the button that submits the form -->
-    <button type="submit">Create</button>
+    <button class="btn btn-primary" type="submit">Create</button>
 </form>

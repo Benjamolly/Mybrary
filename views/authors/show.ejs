@@ -8,16 +8,5 @@
         <h2 class="page-header" >Books by <%= author.name %> </h2>
     </div>
 
-    <div>
-        <% booksByAuthor.forEach(book => {  %>
-            <div class="book-row">
-                <div class="book-item">
-                    <%= book.title %> 
-                    <a href="../books/<%= book.id %>">
-                        <img height="150" width="100" src="<%= book.coverImagePath %>" alt="">
-                    </a>
-                </div>
-            </div>
-        <% }) %> 
-    </div>
-<% } %> 
+    <%- include('../partials/bookGrid.ejs', {books: booksByAuthor, large: true}) %> 
+<% } %>  
